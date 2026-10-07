@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      ETP71_BUNDLE_URL: "https://l67.ai/etp71-u168-u176-2146db5fb5f43a942dd7e571270e7106ece22c20521db4f4de9fa0d55c62a91e.bin"
+      ETP71_BUNDLE_URL: "https://l67.ai/etp71-transfer-u168-u176-4d15c045d429b129"
       ETP71_BUNDLE_SHA256: "4d15c045d429b1290c26a348e3bbcbbf822beefaa4008fe3329c61483d44567f"
 
     steps:
