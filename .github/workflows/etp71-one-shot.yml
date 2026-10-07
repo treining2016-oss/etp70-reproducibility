@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      ETP71_BUNDLE_URL: "https://l67.ai/etp71-transfer-77869c99288a34a297b07420030383ecce9270a9a85f23aa3fd9cd8df3997e51"
-      ETP71_BUNDLE_SHA256: "4db7fba0f7d39b0b9fa656a967fb35aa66272d9984a4ff95b64e5e2ef07208df"
+      ETP71_BUNDLE_URL: "https://l67.ai/etp71-transfer-9a03bba8c55a0df0b6ba8954fe1b93e5ec1d029d95a79b184ceeb0d1e7a86b77"
+      ETP71_BUNDLE_SHA256: "8825160804de884093ffdddeca0136b06459decb58285df807994ff92d4a4192"
 
     steps:
       - name: Runtime resource gate
@@ -65,7 +65,7 @@ jobs:
           set -euo pipefail
           mkdir -p "$RUNNER_TEMP/etp71-work"
           tar -xzf "$RUNNER_TEMP/ETP71_EXTERNAL_PORTABLE_V1.tar.gz" -C "$RUNNER_TEMP/etp71-work"
-          WORK="$RUNNER_TEMP/etp71-work/etp71-external-portable-u120-u128"
+          WORK="$RUNNER_TEMP/etp71-work/etp71-external-portable-u128-u136"
           echo "01f1c63b24e5eb29e8a35d71a8d32f79802210de7d3ef61c14ed6283476764c8  $WORK/payload/modal-bridge/etp70_modal_production_hym_v1.py" | sha256sum -c -
           set +e
           sudo "$RUNNER_TEMP/etp71-venv/bin/python" "$WORK/etp71_portable_worker_v2.py"             >"$RUNNER_TEMP/etp71-worker.stdout" 2>"$RUNNER_TEMP/etp71-worker.stderr"
@@ -80,7 +80,7 @@ jobs:
           d=json.load(open(sys.argv[1]))
           print("ETP71_WORKER_STATUS="+str(d.get("status")))
           assert d.get("status")=="RAW_COMPLETE_AWAIT_SERVER152_PROMOTION",d
-          assert d.get("updates_before")==120 and d.get("updates_after")==128,d
+          assert d.get("updates_before")==128 and d.get("updates_after")==136,d
           PY
           echo "ETP71_WORKER_GATE=GREEN"
 
@@ -88,7 +88,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          WORK="$RUNNER_TEMP/etp71-work/etp71-external-portable-u120-u128"
+          WORK="$RUNNER_TEMP/etp71-work/etp71-external-portable-u128-u136"
           sudo chown -R "$(id -u):$(id -g)" "$WORK/result"
           test -r "$WORK/result/ETP71_PORTABLE_RESULT_V1.npz"
           test -r "$WORK/result/ETP71_PORTABLE_RECEIPT_V1.json"
@@ -98,7 +98,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          WORK="$RUNNER_TEMP/etp71-work/etp71-external-portable-u120-u128"
+          WORK="$RUNNER_TEMP/etp71-work/etp71-external-portable-u128-u136"
           RESULT="$WORK/result/ETP71_PORTABLE_RESULT_V1.npz"
           RECEIPT="$WORK/result/ETP71_PORTABLE_RECEIPT_V1.json"
           PROVIDER="$WORK/result/ETP71_PROVIDER_ZERO_CASH_RECEIPT_V1.json"
