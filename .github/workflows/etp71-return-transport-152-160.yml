@@ -1,0 +1,62 @@
+name: ETP71 Return Transport 152-160
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/etp71-return-transport-152-160.yml"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  transport:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Reconstruct verified return pack from completed job log
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          LOG="$RUNNER_TEMP/job.log"
+          OUT="$RUNNER_TEMP/ETP71_GITHUB_RETURN_152_160_V1.tar.gz"
+          gh api "repos/$GITHUB_REPOSITORY/actions/jobs/113012565772/logs" > "$LOG"
+          python3 - "$LOG" "$OUT" <<'PY'
+          import base64,hashlib,re,sys
+          log,out=sys.argv[1:3]
+          text=open(log,"r",encoding="utf-8",errors="replace").read()
+          lines=text.splitlines()
+          begins=[i for i,l in enumerate(lines) if "ETP71_RETURN_BASE64_BEGIN" in l]
+          ends=[i for i,l in enumerate(lines) if "ETP71_RETURN_BASE64_END" in l]
+          assert begins and ends,(len(begins),len(ends))
+          b=begins[-1]
+          e=next(i for i in ends if i>b)
+          candidates=[]
+          for line in lines[b+1:e]:
+              ms=re.findall(r'([A-Za-z0-9+/=]{1000,})',line)
+              candidates.extend(ms)
+          assert candidates,"base64 payload missing"
+          s=max(candidates,key=len)
+          raw=base64.b64decode(s,validate=True)
+          got=hashlib.sha256(raw).hexdigest()
+          want="a2e9dee75322440dcc3aa5767cc0daf19e8e17d15682e47798d1c53881fbdae3"
+          assert got==want,(got,want)
+          open(out,"wb").write(raw)
+          print("ETP71_RETURN_BYTES="+str(len(raw)))
+          print("ETP71_RETURN_SHA256="+got)
+          PY
+          echo "a2e9dee75322440dcc3aa5767cc0daf19e8e17d15682e47798d1c53881fbdae3  $OUT" | sha256sum -c -
+          echo "ETP71_RETURN_TRANSPORT_GATE=GREEN"
+
+      - name: Upload verified return artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: etp71-return-152-160
+          path: ${{ runner.temp }}/ETP71_GITHUB_RETURN_152_160_V1.tar.gz
+          retention-days: 1
+          compression-level: 0
+          if-no-files-found: error
