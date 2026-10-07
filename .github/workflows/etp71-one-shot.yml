@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      ETP71_BUNDLE_URL: "https://l67.ai/etp71-transfer-4df8e0567c256813e75cdb3f2c692c9940a95977fb4e699abaa48bb87b8254c5"
+      ETP71_BUNDLE_URL: "https://l67.ai/etp71-transfer-2abca909f6e8b13d1ada3e3473586007fc67f6cc105074e4439ec10d132c5c15"
       ETP71_BUNDLE_SHA256: "044849fe41fe435614570a1a072deaa2481fdbc35e9c89a13aaa25253c31e91f"
 
     steps:
@@ -75,7 +75,7 @@ jobs:
           cat "$RUNNER_TEMP/etp71-worker.stdout" || true
           cat "$RUNNER_TEMP/etp71-worker.stderr" >&2 || true
           test "$RC" -eq 0
-          # Persistence/transport-only repair: frozen worker ran under sudo and owns result/.\n          # Return ownership to the unprivileged runner; scientific bytes are unchanged.\n          sudo chown -R "$(id -u):$(id -g)" "$WORK/result"\n          python3 - "$WORK/result/ETP71_PORTABLE_RECEIPT_V1.json" <<'PY'
+          python3 - "$WORK/result/ETP71_PORTABLE_RECEIPT_V1.json" <<'PY'
           import json,sys
           d=json.load(open(sys.argv[1]))
           print("ETP71_WORKER_STATUS="+str(d.get("status")))
@@ -83,6 +83,16 @@ jobs:
           assert d.get("updates_before")==104 and d.get("updates_after")==112,d
           PY
           echo "ETP71_WORKER_GATE=GREEN"
+
+      - name: Repair result ownership
+        shell: bash
+        run: |
+          set -euo pipefail
+          WORK="$RUNNER_TEMP/etp71-work/etp71-external-portable-v1"
+          sudo chown -R "$(id -u):$(id -g)" "$WORK/result"
+          test -r "$WORK/result/ETP71_PORTABLE_RESULT_V1.npz"
+          test -r "$WORK/result/ETP71_PORTABLE_RECEIPT_V1.json"
+          echo "ETP71_RESULT_OWNERSHIP_GATE=GREEN"
 
       - name: Build exact provider receipt and emit return pack
         shell: bash
