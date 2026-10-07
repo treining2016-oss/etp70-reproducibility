@@ -24,7 +24,7 @@ jobs:
           set -euo pipefail
           LOG="$RUNNER_TEMP/job.log"
           OUT="$RUNNER_TEMP/ETP71_GITHUB_RETURN_152_160_V1.tar.gz"
-          gh api "repos/$GITHUB_REPOSITORY/actions/jobs/113012565772/logs" > "$LOG"
+          gh api --allow-escape-sequences "repos/$GITHUB_REPOSITORY/actions/jobs/113012565772/logs" > "$LOG"
           python3 - "$LOG" "$OUT" <<'PY'
           import base64,hashlib,re,sys
           log,out=sys.argv[1:3]
