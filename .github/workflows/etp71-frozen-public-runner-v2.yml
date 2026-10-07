@@ -1,0 +1,100 @@
+name: ETP71 frozen public runner v2
+
+on:
+  workflow_dispatch:
+    inputs:
+      bundle_url_1:
+        required: true
+        type: string
+      bundle_url_2:
+        required: true
+        type: string
+      bundle_url_3:
+        required: true
+        type: string
+      bundle_url_4:
+        required: true
+        type: string
+      expected_sha256:
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  frozen-etp71:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      PYTHONUNBUFFERED: "1"
+      JAX_PLATFORM_NAME: cpu
+
+    steps:
+      - name: Verify free standard runner resources
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "ETP71_RUNNER_NPROC=$(nproc)"
+          echo "ETP71_RUNNER_MEMTOTAL_KIB=$(awk '/MemTotal:/{print $2}' /proc/meminfo)"
+          test "$(nproc)" -ge 4
+          test "$(awk '/MemTotal:/{print $2}' /proc/meminfo)" -ge 12582912
+
+      - name: Download frozen portable bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          U1="$(jq -r '.inputs.bundle_url_1' "$GITHUB_EVENT_PATH")"
+          U2="$(jq -r '.inputs.bundle_url_2' "$GITHUB_EVENT_PATH")"
+          U3="$(jq -r '.inputs.bundle_url_3' "$GITHUB_EVENT_PATH")"
+          U4="$(jq -r '.inputs.bundle_url_4' "$GITHUB_EVENT_PATH")"
+          BUNDLE_URL="$U1$U2$U3$U4"
+          EXPECTED_SHA256="$(jq -r '.inputs.expected_sha256' "$GITHUB_EVENT_PATH")"
+          echo "::add-mask::$BUNDLE_URL"
+          curl --fail --silent --show-error --location "$BUNDLE_URL" -o bundle.tar.gz
+          got="$(sha256sum bundle.tar.gz | awk '{print $1}')"
+          echo "ETP71_BUNDLE_SHA256=$got"
+          test "$got" = "$EXPECTED_SHA256"
+          mkdir run
+          tar -xzf bundle.tar.gz -C run
+          test -f run/etp71-external-portable-v1/etp71_portable_worker_v1.py
+
+      - name: Prepare exact Python environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install frozen packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m venv venv
+          venv/bin/python -m pip install --disable-pip-version-check jax==0.4.38 jaxlib==0.4.38 optax==0.2.3 numpy==2.2.4 jaxtyping==0.2.38 sympy==1.13.3
+
+      - name: Execute frozen M7 gate and one HYM block
+        id: execute
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="$GITHUB_WORKSPACE/run/etp71-external-portable-v1"
+          sudo env PATH="$GITHUB_WORKSPACE/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" PYTHONUNBUFFERED=1 JAX_PLATFORM_NAME=cpu "$GITHUB_WORKSPACE/venv/bin/python" "$ROOT/etp71_portable_worker_v1.py"
+          test -f "$ROOT/result/ETP71_PORTABLE_RESULT_V1.npz"
+          test -f "$ROOT/result/ETP71_PORTABLE_RECEIPT_V1.json"
+
+      - name: Emit bounded return package to job log
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="$GITHUB_WORKSPACE/run/etp71-external-portable-v1"
+          echo "ETP71_EXECUTE_OUTCOME=${{ steps.execute.outcome }}"
+          if [ -f "$ROOT/result/ETP71_PORTABLE_RECEIPT_V1.json" ]; then
+            echo "ETP71_RECEIPT_JSON_BEGIN"
+            cat "$ROOT/result/ETP71_PORTABLE_RECEIPT_V1.json"
+            echo "ETP71_RECEIPT_JSON_END"
+          fi
+          if [ -f "$ROOT/result/ETP71_PORTABLE_RESULT_V1.npz" ]; then
+            sha256sum "$ROOT/result/ETP71_PORTABLE_RESULT_V1.npz" | sed 's/^/ETP71_RESULT_SHA256 /'
+            base64 -w 3000 "$ROOT/result/ETP71_PORTABLE_RESULT_V1.npz" | sed 's/^/ETP71_RESULT_B64 /'
+            echo "ETP71_RESULT_B64_END"
+          fi
