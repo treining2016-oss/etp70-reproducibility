@@ -24,6 +24,7 @@ jobs:
       EXPECTED_SHA256: ${{ inputs.expected_sha256 }}
       PYTHONUNBUFFERED: "1"
       JAX_PLATFORM_NAME: cpu
+
     steps:
       - name: Verify free standard runner resources
         shell: bash
@@ -56,7 +57,7 @@ jobs:
         run: |
           set -euo pipefail
           python -m venv venv
-          venv/bin/python -m pip install --disable-pip-version-check             jax==0.4.38 jaxlib==0.4.38 optax==0.2.3             numpy==2.2.4 jaxtyping==0.2.38 sympy==1.13.3
+          venv/bin/python -m pip install --disable-pip-version-check jax==0.4.38 jaxlib==0.4.38 optax==0.2.3 numpy==2.2.4 jaxtyping==0.2.38 sympy==1.13.3
 
       - name: Execute frozen M7 gate and one HYM block
         id: execute
@@ -64,7 +65,7 @@ jobs:
         run: |
           set -euo pipefail
           ROOT="$GITHUB_WORKSPACE/run/etp71-external-portable-v1"
-          sudo env             PATH="$GITHUB_WORKSPACE/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"             PYTHONUNBUFFERED=1             JAX_PLATFORM_NAME=cpu             "$GITHUB_WORKSPACE/venv/bin/python" "$ROOT/etp71_portable_worker_v1.py"
+          sudo env PATH="$GITHUB_WORKSPACE/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" PYTHONUNBUFFERED=1 JAX_PLATFORM_NAME=cpu "$GITHUB_WORKSPACE/venv/bin/python" "$ROOT/etp71_portable_worker_v1.py"
           test -f "$ROOT/result/ETP71_PORTABLE_RESULT_V1.npz"
           test -f "$ROOT/result/ETP71_PORTABLE_RECEIPT_V1.json"
 
@@ -82,11 +83,6 @@ jobs:
           fi
           if [ -f "$ROOT/result/ETP71_PORTABLE_RESULT_V1.npz" ]; then
             sha256sum "$ROOT/result/ETP71_PORTABLE_RESULT_V1.npz" | sed 's/^/ETP71_RESULT_SHA256 /'
-            "$GITHUB_WORKSPACE/venv/bin/python" - "$ROOT/result/ETP71_PORTABLE_RESULT_V1.npz" <<'PY'
-import base64, pathlib, sys
-data=base64.b64encode(pathlib.Path(sys.argv[1]).read_bytes()).decode()
-for i in range(0,len(data),3000):
-    print("ETP71_RESULT_B64 "+data[i:i+3000])
-PY
+            base64 -w 3000 "$ROOT/result/ETP71_PORTABLE_RESULT_V1.npz" | sed 's/^/ETP71_RESULT_B64 /'
             echo "ETP71_RESULT_B64_END"
           fi
