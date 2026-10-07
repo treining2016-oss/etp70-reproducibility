@@ -20,8 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
-      BUNDLE_URL: ${{ inputs.bundle_url }}
-      EXPECTED_SHA256: ${{ inputs.expected_sha256 }}
       PYTHONUNBUFFERED: "1"
       JAX_PLATFORM_NAME: cpu
 
@@ -39,6 +37,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          BUNDLE_URL="$(jq -r '.inputs.bundle_url' "$GITHUB_EVENT_PATH")"
+          EXPECTED_SHA256="$(jq -r '.inputs.expected_sha256' "$GITHUB_EVENT_PATH")"
+          echo "::add-mask::$BUNDLE_URL"
           curl --fail --silent --show-error --location "$BUNDLE_URL" -o bundle.tar.gz
           got="$(sha256sum bundle.tar.gz | awk '{print $1}')"
           echo "ETP71_BUNDLE_SHA256=$got"
