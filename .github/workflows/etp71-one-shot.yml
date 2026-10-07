@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      ETP71_BUNDLE_URL: "https://l67.ai/etp71-transfer-c21a578f7f8477f9957f722399453af7b18da32746c4f39cbc07cc0d62cce83d"
+      ETP71_BUNDLE_URL: "https://l67.ai/etp71-transfer-4df8e0567c256813e75cdb3f2c692c9940a95977fb4e699abaa48bb87b8254c5"
       ETP71_BUNDLE_SHA256: "044849fe41fe435614570a1a072deaa2481fdbc35e9c89a13aaa25253c31e91f"
 
     steps:
@@ -75,7 +75,7 @@ jobs:
           cat "$RUNNER_TEMP/etp71-worker.stdout" || true
           cat "$RUNNER_TEMP/etp71-worker.stderr" >&2 || true
           test "$RC" -eq 0
-          python3 - "$WORK/result/ETP71_PORTABLE_RECEIPT_V1.json" <<'PY'
+          # Persistence/transport-only repair: frozen worker ran under sudo and owns result/.\n          # Return ownership to the unprivileged runner; scientific bytes are unchanged.\n          sudo chown -R "$(id -u):$(id -g)" "$WORK/result"\n          python3 - "$WORK/result/ETP71_PORTABLE_RECEIPT_V1.json" <<'PY'
           import json,sys
           d=json.load(open(sys.argv[1]))
           print("ETP71_WORKER_STATUS="+str(d.get("status")))
