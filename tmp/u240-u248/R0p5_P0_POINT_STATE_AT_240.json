@@ -1,0 +1,2276 @@
+{
+  "baseline": {
+    "test": {
+      "all_validators": true,
+      "max": 4.77404545804979e+16,
+      "median": 270086820.0370887,
+      "weighted_mean": 2444694536808935.5
+    },
+    "train": {
+      "all_validators": true,
+      "max": 1.3574502104368506e+16,
+      "median": 190872376.98218733,
+      "weighted_mean": 988831462896237.0
+    },
+    "validation": {
+      "all_validators": true,
+      "max": 3.0024885443185447e+22,
+      "median": 82053893.749868,
+      "weighted_mean": 1.765857488996059e+21
+    }
+  },
+  "blocks_completed": 30,
+  "consecutive_accepted_blocks": 30,
+  "history": [
+    {
+      "accepted": true,
+      "block": 1,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 40366955371.93762,
+      "last_grad_norm": 131592926348.88109,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.768932238633467e+16,
+          "median": 269822973.8443394,
+          "weighted_mean": 2442076119713587.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.354967609683249e+16,
+          "median": 190249752.14768562,
+          "weighted_mean": 987023007856884.4
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.99579723235942e+22,
+          "median": 81891106.18501769,
+          "weighted_mean": 1.7619221189986157e+21
+        }
+      },
+      "resolution_details": {},
+      "resolution_stable_last3": false,
+      "runtime_seconds": 68.18702864646912,
+      "theta_sha256": "f89451cc109b0f930679da36eb1bff19b0048c8fcd295401aee023e5dd1037b0",
+      "updates": 8
+    },
+    {
+      "accepted": true,
+      "block": 2,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 1663639111590.886,
+      "last_grad_norm": 3736596032299.467,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.767298608152231e+16,
+          "median": 269547427.6884397,
+          "weighted_mean": 2441239548946818.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.352067483331234e+16,
+          "median": 189869132.12073943,
+          "weighted_mean": 984910435630692.6
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.989448826255999e+22,
+          "median": 81750889.52386492,
+          "weighted_mean": 1.7581884226677905e+21
+        }
+      },
+      "resolution_details": {},
+      "resolution_stable_last3": false,
+      "runtime_seconds": 67.86389780044556,
+      "theta_sha256": "4b3a41c833ca443055954459deafa8fad5d835292c957a42e804df85ae0a39e0",
+      "updates": 16
+    },
+    {
+      "accepted": true,
+      "block": 3,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 398844585.7130202,
+      "last_grad_norm": 861338937.5902687,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.766442447159913e+16,
+          "median": 269421523.7584268,
+          "weighted_mean": 2440801115831958.5
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.350746669443686e+16,
+          "median": 189697656.67556998,
+          "weighted_mean": 983948300122737.9
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.986432123871117e+22,
+          "median": 81687131.05423819,
+          "weighted_mean": 1.756414205574233e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 16336304812360.0,
+            "limit": 919454.9191734834,
+            "pass": false
+          },
+          {
+            "difference": 8561609923184.0,
+            "limit": 919139.953578058,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 836570766769.0,
+            "limit": 47083.47254500225,
+            "pass": false
+          },
+          {
+            "difference": 438433114859.5,
+            "limit": 47067.34337670518,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 6.348406103420908e+19,
+            "limit": 577592711388.2572,
+            "pass": false
+          },
+          {
+            "difference": 3.016702384882162e+19,
+            "limit": 576368732323.6324,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 3.7336963308252037e+18,
+            "limit": 33970035187.12307,
+            "pass": false
+          },
+          {
+            "difference": 1.7742170935575183e+18,
+            "limit": 33898049147.3495,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 69.47192716598511,
+      "theta_sha256": "95cefbecc9517cf8ad6f0a40eab12b342719ef4fdb0c4c51e603985c5174ed40",
+      "updates": 24
+    },
+    {
+      "accepted": true,
+      "block": 4,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 420048161.39409596,
+      "last_grad_norm": 1022498526.574771,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.75976013875819e+16,
+          "median": 269096911.0999304,
+          "weighted_mean": 2437379216431143.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3469586803238576e+16,
+          "median": 189221782.5677005,
+          "weighted_mean": 981188968851570.5
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.974216241424848e+22,
+          "median": 81534471.32203701,
+          "weighted_mean": 1.74922966275824e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 8561609923184.0,
+            "limit": 919139.953578058,
+            "pass": false
+          },
+          {
+            "difference": 66823084017224.0,
+            "limit": 918974.884879951,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 438433114859.5,
+            "limit": 47067.34337670518,
+            "pass": false
+          },
+          {
+            "difference": 3421899400815.5,
+            "limit": 47058.890342272854,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 3.016702384882162e+19,
+            "limit": 576368732323.6324,
+            "pass": false
+          },
+          {
+            "difference": 1.2215882446269107e+20,
+            "limit": 575787109077.8685,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 1.7742170935575183e+18,
+            "limit": 33898049147.3495,
+            "pass": false
+          },
+          {
+            "difference": 7.184542815992938e+18,
+            "limit": 33863842063.81961,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 66.95961999893188,
+      "theta_sha256": "6c28f21bf03872e6d975f9e1ec96dfb5fba579929b0d6ae0e7473ccb093dd322",
+      "updates": 32
+    },
+    {
+      "accepted": true,
+      "block": 5,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 31399926260887.906,
+      "last_grad_norm": 68819396292533.94,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.760177866640395e+16,
+          "median": 269275654.8283184,
+          "weighted_mean": 2437593037005610.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3427565701647808e+16,
+          "median": 189205175.501783,
+          "weighted_mean": 978128001219761.6
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9631693781844623e+22,
+          "median": 81301339.21933724,
+          "weighted_mean": 1.742732656727129e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 66823084017224.0,
+            "limit": 918974.884879951,
+            "pass": false
+          },
+          {
+            "difference": 4177278822048.0,
+            "limit": 917686.529117287,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 3421899400815.5,
+            "limit": 47058.890342272854,
+            "pass": false
+          },
+          {
+            "difference": 213820574467.0,
+            "limit": 46992.91577858524,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 1.2215882446269107e+20,
+            "limit": 575787109077.8685,
+            "pass": false
+          },
+          {
+            "difference": 1.1046863240385528e+20,
+            "limit": 573431874688.8629,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 7.184542815992938e+18,
+            "limit": 33863842063.81961,
+            "pass": false
+          },
+          {
+            "difference": 6.49700603111093e+18,
+            "limit": 33725323357.66852,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 67.15122294425964,
+      "theta_sha256": "e27d752b5f39c7e1ed46c09fc079a919f83315e4901eb628a16eb11f1ba089fd",
+      "updates": 40
+    },
+    {
+      "accepted": true,
+      "block": 6,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 27413078447.985477,
+      "last_grad_norm": 88572720472.15422,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.760626418204862e+16,
+          "median": 269394708.574205,
+          "weighted_mean": 2437822675976410.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3404938655785682e+16,
+          "median": 189217108.17489484,
+          "weighted_mean": 976479767509699.4
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9568385226264724e+22,
+          "median": 81175058.24060869,
+          "weighted_mean": 1.7390092824219377e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 4177278822048.0,
+            "limit": 917686.529117287,
+            "pass": false
+          },
+          {
+            "difference": 4485515644672.0,
+            "limit": 917767.0674719857,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 213820574467.0,
+            "limit": 46992.91577858524,
+            "pass": false
+          },
+          {
+            "difference": 229638970800.0,
+            "limit": 46997.03826070863,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 1.1046863240385528e+20,
+            "limit": 573431874688.8629,
+            "pass": false
+          },
+          {
+            "difference": 6.330855557989977e+19,
+            "limit": 571302028375.3578,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 6.49700603111093e+18,
+            "limit": 33725323357.66852,
+            "pass": false
+          },
+          {
+            "difference": 3.7233743051913953e+18,
+            "limit": 33600060429.6946,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 65.86934852600098,
+      "theta_sha256": "ea25b6deaf879e3f40763a0215df4c46f9e26d5846be02b25e7858b5fecff142",
+      "updates": 48
+    },
+    {
+      "accepted": true,
+      "block": 7,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 879702365015.8817,
+      "last_grad_norm": 2264514849054.874,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.760416752504899e+16,
+          "median": 269443410.69771254,
+          "weighted_mean": 2437715274088892.5
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3392522210513508e+16,
+          "median": 189221239.67236084,
+          "weighted_mean": 975575310659261.5
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9525037631435734e+22,
+          "median": 81108578.14192086,
+          "weighted_mean": 1.7364598746949618e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 4485515644672.0,
+            "limit": 917767.0674719857,
+            "pass": false
+          },
+          {
+            "difference": 2096656999632.0,
+            "limit": 917853.5486635428,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 229638970800.0,
+            "limit": 46997.03826070863,
+            "pass": false
+          },
+          {
+            "difference": 107401887517.5,
+            "limit": 47001.46572310001,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 6.330855557989977e+19,
+            "limit": 571302028375.3578,
+            "pass": false
+          },
+          {
+            "difference": 4.334759482898986e+19,
+            "limit": 570081433073.4966,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 3.7233743051913953e+18,
+            "limit": 33600060429.6946,
+            "pass": false
+          },
+          {
+            "difference": 2.5494077269758444e+18,
+            "limit": 33528273399.61062,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 65.80832958221436,
+      "theta_sha256": "0bdf0b08c4fdbfc04e6306585f27e2abc5123e52c19fe08784378240f900092e",
+      "updates": 56
+    },
+    {
+      "accepted": true,
+      "block": 8,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 9.675094140250746e+20,
+      "last_grad_norm": 3.7023979297511755e+21,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.747173146986185e+16,
+          "median": 268685418.390874,
+          "weighted_mean": 2430933534966738.5
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3355100679654678e+16,
+          "median": 188654153.23903388,
+          "weighted_mean": 972849343000240.2
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.943490447750043e+22,
+          "median": 81005295.04351124,
+          "weighted_mean": 1.7311588618006327e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 2096656999632.0,
+            "limit": 917853.5486635428,
+            "pass": false
+          },
+          {
+            "difference": 132436055187144.0,
+            "limit": 917813.1249062809,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 107401887517.5,
+            "limit": 47001.46572310001,
+            "pass": false
+          },
+          {
+            "difference": 6781739122154.0,
+            "limit": 46999.395003935526,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 4.334759482898986e+19,
+            "limit": 570081433073.4966,
+            "pass": false
+          },
+          {
+            "difference": 9.013315393530574e+19,
+            "limit": 569245687097.1337,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 2.5494077269758444e+18,
+            "limit": 33528273399.61062,
+            "pass": false
+          },
+          {
+            "difference": 5.301012894329078e+18,
+            "limit": 33479120562.911507,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 67.26563930511475,
+      "theta_sha256": "f684b9f4d2b5eba134057577cebb22bb097761c657d78aca68b9b837f310e37a",
+      "updates": 64
+    },
+    {
+      "accepted": true,
+      "block": 9,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 21943114563.387127,
+      "last_grad_norm": 64960135127.71562,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.730933810738515e+16,
+          "median": 268045774.72450674,
+          "weighted_mean": 2422617760422392.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3325235887065264e+16,
+          "median": 187776731.15129703,
+          "weighted_mean": 970673814519963.6
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9365436522686962e+22,
+          "median": 80924848.44508415,
+          "weighted_mean": 1.7270732339473739e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 132436055187144.0,
+            "limit": 917813.1249062809,
+            "pass": false
+          },
+          {
+            "difference": 162393362476696.0,
+            "limit": 915259.7444780313,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 6781739122154.0,
+            "limit": 46999.395003935526,
+            "pass": false
+          },
+          {
+            "difference": 8315774544346.5,
+            "limit": 46868.642393405615,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 9.013315393530574e+19,
+            "limit": 569245687097.1337,
+            "pass": false
+          },
+          {
+            "difference": 6.946795481346553e+19,
+            "limit": 567507910848.2897,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 5.301012894329078e+18,
+            "limit": 33479120562.911507,
+            "pass": false
+          },
+          {
+            "difference": 4.085627853258883e+18,
+            "limit": 33376916502.58102,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 65.34895658493042,
+      "theta_sha256": "63dfebed4d344accfcf885e148bd2ca42f1aac4c9ba230ccf8c2f9d37adadf62",
+      "updates": 72
+    },
+    {
+      "accepted": true,
+      "block": 10,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 735873373063.315,
+      "last_grad_norm": 2049738287446.3328,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.723550377605277e+16,
+          "median": 267754810.13231686,
+          "weighted_mean": 2418836881427800.5
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3311645708409384e+16,
+          "median": 187378222.83849418,
+          "weighted_mean": 969683825409663.6
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.933383016339649e+22,
+          "median": 80888235.59186807,
+          "weighted_mean": 1.7252143650314254e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 162393362476696.0,
+            "limit": 915259.7444780313,
+            "pass": false
+          },
+          {
+            "difference": 73834331332384.0,
+            "limit": 912128.7841603166,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 8315774544346.5,
+            "limit": 46868.642393405615,
+            "pass": false
+          },
+          {
+            "difference": 3780878994591.5,
+            "limit": 46708.3134260616,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 6.946795481346553e+19,
+            "limit": 567507910848.2897,
+            "pass": false
+          },
+          {
+            "difference": 3.1606359290472825e+19,
+            "limit": 566168561711.3754,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 4.085627853258883e+18,
+            "limit": 33376916502.58102,
+            "pass": false
+          },
+          {
+            "difference": 1.8588689159484867e+18,
+            "limit": 33298145187.753796,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 63.4236946105957,
+      "theta_sha256": "a8829da888d2a4b55d392b81d1fa698732342ad7ccb5b05a3e1c6247c2ec2708",
+      "updates": 80
+    },
+    {
+      "accepted": true,
+      "block": 11,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 5849186848.233541,
+      "last_grad_norm": 12011037711.046217,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.7252712443729336e+16,
+          "median": 267667855.7842767,
+          "weighted_mean": 2419718039841159.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3312336786060088e+16,
+          "median": 187359999.56118873,
+          "weighted_mean": 969734122212165.2
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9330161585183026e+22,
+          "median": 80847661.21536584,
+          "weighted_mean": 1.7249986044640394e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 73834331332384.0,
+            "limit": 912128.7841603166,
+            "pass": false
+          },
+          {
+            "difference": 17208667676568.0,
+            "limit": 910705.2508461402,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 3780878994591.5,
+            "limit": 46708.3134260616,
+            "pass": false
+          },
+          {
+            "difference": 881158413358.5,
+            "limit": 46635.41769979787,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 3.1606359290472825e+19,
+            "limit": 566168561711.3754,
+            "pass": false
+          },
+          {
+            "difference": 3.668578213463851e+18,
+            "limit": 565559187933.9213,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 1.8588689159484867e+18,
+            "limit": 33298145187.753796,
+            "pass": false
+          },
+          {
+            "difference": 2.1576056738598093e+17,
+            "limit": 33262306008.59705,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 63.729106187820435,
+      "theta_sha256": "96ef53e2cc27bdd2fdddd2c03ced79a3e170d4da7fc823965f01dad976484768",
+      "updates": 88
+    },
+    {
+      "accepted": true,
+      "block": 12,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 2.72825685447881e+18,
+      "last_grad_norm": 1.113155870359239e+19,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.7361444913857736e+16,
+          "median": 267653851.56565642,
+          "weighted_mean": 2425285874681457.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3324681062128356e+16,
+          "median": 187505501.8043968,
+          "weighted_mean": 970633292006508.5
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9345508005273846e+22,
+          "median": 80834451.33552158,
+          "weighted_mean": 1.7259011754626208e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 17208667676568.0,
+            "limit": 910705.2508461402,
+            "pass": false
+          },
+          {
+            "difference": 108732470128400.0,
+            "limit": 911037.0356850914,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 881158413358.5,
+            "limit": 46635.41769979787,
+            "pass": false
+          },
+          {
+            "difference": 5567834840298.0,
+            "limit": 46652.406522393634,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 3.668578213463851e+18,
+            "limit": 565559187933.9213,
+            "pass": false
+          },
+          {
+            "difference": 1.53464200908201e+19,
+            "limit": 565488457377.9822,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 2.1576056738598093e+17,
+            "limit": 33262306008.59705,
+            "pass": false
+          },
+          {
+            "difference": 9.025709985814282e+17,
+            "limit": 33258146123.21559,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 65.51799273490906,
+      "theta_sha256": "0f15649648998af45f9a0da4086c626755d9aa39e47d74174723f7c527e46674",
+      "updates": 96
+    },
+    {
+      "accepted": true,
+      "block": 13,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 3292127933342696.5,
+      "last_grad_norm": 8040904073613490.0,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.741041650221069e+16,
+          "median": 267647763.244959,
+          "weighted_mean": 2427793550007173.5
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3330229500337544e+16,
+          "median": 187571066.09465653,
+          "weighted_mean": 971037445965321.1
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.935242177855778e+22,
+          "median": 80828642.34770288,
+          "weighted_mean": 1.7263077961089942e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 108732470128400.0,
+            "limit": 911037.0356850914,
+            "pass": false
+          },
+          {
+            "difference": 48971588352952.0,
+            "limit": 913133.4086157768,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 5567834840298.0,
+            "limit": 46652.406522393634,
+            "pass": false
+          },
+          {
+            "difference": 2507675325716.5,
+            "limit": 46759.75493660646,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 1.53464200908201e+19,
+            "limit": 565488457377.9822,
+            "pass": false
+          },
+          {
+            "difference": 6.91377328393447e+18,
+            "limit": 565784337896.684,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 9.025709985814282e+17,
+            "limit": 33258146123.21559,
+            "pass": false
+          },
+          {
+            "difference": 4.0662064637332685e+17,
+            "limit": 33275547782.60228,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 64.78282594680786,
+      "theta_sha256": "842f0d82c4ca4d1c335b02feb558dcc6993a6258e7e5509c8214aaff2b4cf083",
+      "updates": 104
+    },
+    {
+      "accepted": true,
+      "block": 14,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 28117234504.773365,
+      "last_grad_norm": 85373671452.11128,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.7432383974978104e+16,
+          "median": 267645075.9447544,
+          "weighted_mean": 2428918432674541.5
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3332716132216366e+16,
+          "median": 187600483.12850833,
+          "weighted_mean": 971218574794711.4
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9355523442770815e+22,
+          "median": 80826064.8599082,
+          "weighted_mean": 1.7264902146893184e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 48971588352952.0,
+            "limit": 913133.4086157768,
+            "pass": false
+          },
+          {
+            "difference": 21967472767416.0,
+            "limit": 914077.5857514067,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 2507675325716.5,
+            "limit": 46759.75493660646,
+            "pass": false
+          },
+          {
+            "difference": 1124882667368.0,
+            "limit": 46808.10316842325,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 6.91377328393447e+18,
+            "limit": 565784337896.684,
+            "pass": false
+          },
+          {
+            "difference": 3.1016642130351227e+18,
+            "limit": 565917636139.0969,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 4.0662064637332685e+17,
+            "limit": 33275547782.60228,
+            "pass": false
+          },
+          {
+            "difference": 1.8241858032422093e+17,
+            "limit": 33283387469.451187,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 364.5358293056488,
+      "theta_sha256": "a94a7cdf39c52b84a5650d91cacbf89becaa69f17565433ddf833284dc7f55d1",
+      "updates": 112
+    },
+    {
+      "accepted": true,
+      "block": 15,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 5115172275.680563,
+      "last_grad_norm": 16629181586.803633,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.7442176422677e+16,
+          "median": 267643486.461006,
+          "weighted_mean": 2429419871936322.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.333373537034424e+16,
+          "median": 187613215.2046282,
+          "weighted_mean": 971292816935222.1
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9356696896254253e+22,
+          "median": 80824674.04839584,
+          "weighted_mean": 1.7265592291614896e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 21967472767416.0,
+            "limit": 914077.5857514067,
+            "pass": false
+          },
+          {
+            "difference": 9792447698896.0,
+            "limit": 914501.1208298501,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 1124882667368.0,
+            "limit": 46808.10316842325,
+            "pass": false
+          },
+          {
+            "difference": 501439261780.5,
+            "limit": 46829.791019083525,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 3.1016642130351227e+18,
+            "limit": 565917636139.0969,
+            "pass": false
+          },
+          {
+            "difference": 1.1734534834377196e+18,
+            "limit": 565977436536.2424,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 1.8241858032422093e+17,
+            "limit": 33283387469.451187,
+            "pass": false
+          },
+          {
+            "difference": 6.901447217119232e+16,
+            "limit": 33286904517.97767,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 253.36072254180908,
+      "theta_sha256": "a47f3e76d685358d6cc6748359d06b8109a866a33dc37847c6d0715371eea839",
+      "updates": 120
+    },
+    {
+      "accepted": true,
+      "block": 16,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 1867261949.7111707,
+      "last_grad_norm": 4840871573.802243,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.744654424775032e+16,
+          "median": 267642779.2567355,
+          "weighted_mean": 2429643533993007.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3334189903967928e+16,
+          "median": 187618894.4681354,
+          "weighted_mean": 971325925536855.8
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9357220319314122e+22,
+          "median": 80824054.79922336,
+          "weighted_mean": 1.7265900133099103e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 9792447698896.0,
+            "limit": 914501.1208298501,
+            "pass": false
+          },
+          {
+            "difference": 4367825073320.0,
+            "limit": 914689.9202037342,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 501439261780.5,
+            "limit": 46829.791019083525,
+            "pass": false
+          },
+          {
+            "difference": 223662056685.0,
+            "limit": 46839.45881834844,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 1.1734534834377196e+18,
+            "limit": 565977436536.2424,
+            "pass": false
+          },
+          {
+            "difference": 5.234230598691717e+17,
+            "limit": 566000060837.1085,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 6.901447217119232e+16,
+            "limit": 33286904517.97767,
+            "pass": false
+          },
+          {
+            "difference": 3.078414842068992e+16,
+            "limit": 33288235123.92375,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 371.69859623908997,
+      "theta_sha256": "f3ca7ca59744eaa04aa0cc8c17cf8ff066e027e45706dc3aaf5117d347627448",
+      "updates": 128
+    },
+    {
+      "accepted": true,
+      "block": 17,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 3456791242223546.0,
+      "last_grad_norm": 7971887277015728.0,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.744848826758009e+16,
+          "median": 267642463.6602084,
+          "weighted_mean": 2429743080899553.5
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3334392189147992e+16,
+          "median": 187621422.15454692,
+          "weighted_mean": 971340660155138.2
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9357453209643363e+22,
+          "median": 80823779.4132871,
+          "weighted_mean": 1.7266037103190996e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 4367825073320.0,
+            "limit": 914689.9202037342,
+            "pass": false
+          },
+          {
+            "difference": 1944019829768.0,
+            "limit": 914774.1323092706,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 223662056685.0,
+            "limit": 46839.45881834844,
+            "pass": false
+          },
+          {
+            "difference": 99546906546.5,
+            "limit": 46843.77104523616,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 5.234230598691717e+17,
+            "limit": 566000060837.1085,
+            "pass": false
+          },
+          {
+            "difference": 2.3289032924043674e+17,
+            "limit": 566010152486.2057,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 3.078414842068992e+16,
+            "limit": 33288235123.92375,
+            "pass": false
+          },
+          {
+            "difference": 1.3697009189388288e+16,
+            "limit": 33288828645.39316,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 399.1262249946594,
+      "theta_sha256": "1e7497727ec4111e493b15852e4bf2cbb7be9e790cee12544b8d36fbe0afd815",
+      "updates": 136
+    },
+    {
+      "accepted": true,
+      "block": 18,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 321717955.1770088,
+      "last_grad_norm": 806241284.5779343,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.744935188887685e+16,
+          "median": 267642322.19896212,
+          "weighted_mean": 2429787304125718.5
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.333448204972892e+16,
+          "median": 187622544.99074295,
+          "weighted_mean": 971347205673490.0
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9357556743351667e+22,
+          "median": 80823657.12756634,
+          "weighted_mean": 1.7266097994605367e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 1944019829768.0,
+            "limit": 914774.1323092706,
+            "pass": false
+          },
+          {
+            "difference": 863621296760.0,
+            "limit": 914811.6132065869,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 99546906546.5,
+            "limit": 46843.77104523616,
+            "pass": false
+          },
+          {
+            "difference": 44223226165.0,
+            "limit": 46845.69031957961,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 2.3289032924043674e+17,
+            "limit": 566010152486.2057,
+            "pass": false
+          },
+          {
+            "difference": 1.035337083041874e+17,
+            "limit": 566014642635.1139,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 1.3697009189388288e+16,
+            "limit": 33288828645.39316,
+            "pass": false
+          },
+          {
+            "difference": 6089141437071360.0,
+            "limit": 33289092725.104237,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 262.2156581878662,
+      "theta_sha256": "d363075c99c620d3c1e59284a518e007a1f9f0ed3217f217659dbb562d353049",
+      "updates": 144
+    },
+    {
+      "accepted": true,
+      "block": 19,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 316121785146914.6,
+      "last_grad_norm": 794426021493734.2,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.744973491920493e+16,
+          "median": 267642259.33216342,
+          "weighted_mean": 2429806917857917.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.333452190493788e+16,
+          "median": 187623042.97711554,
+          "weighted_mean": 971350108759573.9
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.935760261854925e+22,
+          "median": 80823602.90314192,
+          "weighted_mean": 1.7266124975244923e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 863621296760.0,
+            "limit": 914811.6132065869,
+            "pass": false
+          },
+          {
+            "difference": 383030328080.0,
+            "limit": 914828.2639118156,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 44223226165.0,
+            "limit": 46845.69031957961,
+            "pass": false
+          },
+          {
+            "difference": 19613732198.5,
+            "limit": 46846.542947815964,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 1.035337083041874e+17,
+            "limit": 566014642635.1139,
+            "pass": false
+          },
+          {
+            "difference": 4.58751975840809e+16,
+            "limit": 566016638775.3951,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 6089141437071360.0,
+            "limit": 33289092725.104237,
+            "pass": false
+          },
+          {
+            "difference": 2698063955623936.0,
+            "limit": 33289210124.361927,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 310.191593170166,
+      "theta_sha256": "181d62098474eefadb45eecddabef1f368a4dcd81e6c413a6f4c3c2abe19da1f",
+      "updates": 152
+    },
+    {
+      "accepted": true,
+      "block": 20,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 28004760401559.332,
+      "last_grad_norm": 104528630172013.34,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.744984209885499e+16,
+          "median": 267645450.18694127,
+          "weighted_mean": 2429812405938718.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3334590697975728e+16,
+          "median": 187621343.13210022,
+          "weighted_mean": 971355119846312.6
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9357490876884393e+22,
+          "median": 80820693.7078641,
+          "weighted_mean": 1.7266059256474367e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 383030328080.0,
+            "limit": 914828.2639118156,
+            "pass": false
+          },
+          {
+            "difference": 107179650064.0,
+            "limit": 914835.6487749616,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 19613732198.5,
+            "limit": 46846.542947815964,
+            "pass": false
+          },
+          {
+            "difference": 5488080801.0,
+            "limit": 46846.921102540146,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 4.58751975840809e+16,
+            "limit": 566016638775.3951,
+            "pass": false
+          },
+          {
+            "difference": 1.1174166485847245e+17,
+            "limit": 566017523253.8062,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 2698063955623936.0,
+            "limit": 33289210124.361927,
+            "pass": false
+          },
+          {
+            "difference": 6571877055594496.0,
+            "limit": 33289262143.305626,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 340.3854193687439,
+      "theta_sha256": "b612c0b340950ec7592e13d0c3e27488277306cadf3763b74454b6b0dadff970",
+      "updates": 160
+    },
+    {
+      "accepted": true,
+      "block": 21,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 4759770817.525656,
+      "last_grad_norm": 13171580968.920317,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.7449819761135336e+16,
+          "median": 267650450.90703467,
+          "weighted_mean": 2429811261724527.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3334678263376344e+16,
+          "median": 187618447.4102588,
+          "weighted_mean": 971361498408851.4
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9357294214203667e+22,
+          "median": 80816187.41569905,
+          "weighted_mean": 1.726594359299641e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 107179650064.0,
+            "limit": 914835.6487749616,
+            "pass": false
+          },
+          {
+            "difference": 22337719656.0,
+            "limit": 914837.7152093656,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 5488080801.0,
+            "limit": 46846.921102540146,
+            "pass": false
+          },
+          {
+            "difference": 1144214191.0,
+            "limit": 46847.02691328848,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 1.1174166485847245e+17,
+            "limit": 566017523253.8062,
+            "pass": false
+          },
+          {
+            "difference": 1.966626807260119e+17,
+            "limit": 566015368863.2992,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 6571877055594496.0,
+            "limit": 33289262143.305626,
+            "pass": false
+          },
+          {
+            "difference": 1.156634779582464e+16,
+            "limit": 33289135436.85679,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 292.45446038246155,
+      "theta_sha256": "349b0894dc990e4f58e86a439fe5594b5ab7bbcc9f0e63b99c79bb508ee53bf7",
+      "updates": 168
+    },
+    {
+      "accepted": true,
+      "block": 22,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 3068789840.2208185,
+      "last_grad_norm": 8806066306.066904,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.744980503419398e+16,
+          "median": 267652581.15794328,
+          "weighted_mean": 2429810507435982.5
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3334716611608466e+16,
+          "median": 187617103.82003957,
+          "weighted_mean": 971364291823924.9
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9357207453342747e+22,
+          "median": 80814177.79587674,
+          "weighted_mean": 1.726589256621854e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 22337719656.0,
+            "limit": 914837.7152093656,
+            "pass": false
+          },
+          {
+            "difference": 14726941352.0,
+            "limit": 914837.2845358901,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 1144214191.0,
+            "limit": 46847.02691328848,
+            "pass": false
+          },
+          {
+            "difference": 754288544.5,
+            "limit": 46847.0048527241,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 1.966626807260119e+17,
+            "limit": 566015368863.2992,
+            "pass": false
+          },
+          {
+            "difference": 8.676086091926733e+16,
+            "limit": 566011577187.0883,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 1.156634779582464e+16,
+            "limit": 33289135436.85679,
+            "pass": false
+          },
+          {
+            "difference": 5102677786886144.0,
+            "limit": 33288912436.511105,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 376.7641327381134,
+      "theta_sha256": "6d11860f1738d2201562a45af361e16a840704d49c6197540828f115637a7b6a",
+      "updates": 176
+    },
+    {
+      "accepted": true,
+      "block": 23,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 1983368097164.48,
+      "last_grad_norm": 6657524954192.465,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.744979643445792e+16,
+          "median": 267653489.96837118,
+          "weighted_mean": 2429810066994312.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.333473337874018e+16,
+          "median": 187616485.53849512,
+          "weighted_mean": 971365513198112.1
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9357169098259937e+22,
+          "median": 80813283.45605525,
+          "weighted_mean": 1.7265870008393846e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 14726941352.0,
+            "limit": 914837.2845358901,
+            "pass": false
+          },
+          {
+            "difference": 8599736064.0,
+            "limit": 914837.0005989836,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 754288544.5,
+            "limit": 46847.0048527241,
+            "pass": false
+          },
+          {
+            "difference": 440441670.5,
+            "limit": 46846.9903099653,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 8.676086091926733e+16,
+            "limit": 566011577187.0883,
+            "pass": false
+          },
+          {
+            "difference": 3.835508281049088e+16,
+            "limit": 566009904428.987,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 5102677786886144.0,
+            "limit": 33288912436.511105,
+            "pass": false
+          },
+          {
+            "difference": 2255782469435392.0,
+            "limit": 33288814056.37154,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 384.347460269928,
+      "theta_sha256": "4149f0fcd49ca19059d9c13c791b26d84f3f5885e117c3a48cb458e97a39ceaf",
+      "updates": 184
+    },
+    {
+      "accepted": true,
+      "block": 24,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 5.973536938662798e+16,
+      "last_grad_norm": 2.3456798078805715e+17,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.744979263420744e+16,
+          "median": 267653890.56034258,
+          "weighted_mean": 2429809872361824.5
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3334740770682226e+16,
+          "median": 187616212.95420834,
+          "weighted_mean": 971366051651997.0
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.935715216494259e+22,
+          "median": 80812889.18681143,
+          "weighted_mean": 1.7265860049379913e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 8599736064.0,
+            "limit": 914837.0005989836,
+            "pass": false
+          },
+          {
+            "difference": 3800250480.0,
+            "limit": 914836.8347952097,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 440441670.5,
+            "limit": 46846.9903099653,
+            "pass": false
+          },
+          {
+            "difference": 194632487.5,
+            "limit": 46846.98181820572,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 3.835508281049088e+16,
+            "limit": 566009904428.987,
+            "pass": false
+          },
+          {
+            "difference": 1.6933317345542144e+16,
+            "limit": 566009164939.1432,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 2255782469435392.0,
+            "limit": 33288814056.37154,
+            "pass": false
+          },
+          {
+            "difference": 995901393338368.0,
+            "limit": 33288770564.659256,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 367.05432534217834,
+      "theta_sha256": "9d4aa8c15498299d7eedb5abe5a4ac7ae8a72550a720aa97e492e0ffe7fed7f8",
+      "updates": 192
+    },
+    {
+      "accepted": true,
+      "block": 25,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 2.188893068304603e+16,
+      "last_grad_norm": 7.800978626621666e+16,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.734875904982315e+16,
+          "median": 267780765.23526752,
+          "weighted_mean": 2424636246791296.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3274445606561926e+16,
+          "median": 188070465.75711256,
+          "weighted_mean": 966973906714411.5
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.926703773758512e+22,
+          "median": 80657327.95493883,
+          "weighted_mean": 1.721286093412688e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 3800250480.0,
+            "limit": 914836.8347952097,
+            "pass": false
+          },
+          {
+            "difference": 101033584384288.0,
+            "limit": 914836.7615259992,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 194632487.5,
+            "limit": 46846.98181820572,
+            "pass": false
+          },
+          {
+            "difference": 5173625570528.5,
+            "limit": 46846.978065671836,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 1.6933317345542144e+16,
+            "limit": 566009164939.1432,
+            "pass": false
+          },
+          {
+            "difference": 9.011442735747013e+19,
+            "limit": 566008838463.0862,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 995901393338368.0,
+            "limit": 33288770564.659256,
+            "pass": false
+          },
+          {
+            "difference": 5.299911525303321e+18,
+            "limit": 33288751363.580498,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 294.1579177379608,
+      "theta_sha256": "6e646527cb8971efaffcc60b548f3bf5641582b05987a77bd88877c681f02987",
+      "updates": 200
+    },
+    {
+      "accepted": true,
+      "block": 26,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 175583293491.8923,
+      "last_grad_norm": 609020274348.237,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.723764882173174e+16,
+          "median": 267923878.48177424,
+          "weighted_mean": 2418946627177078.5
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3208205996635904e+16,
+          "median": 188573597.65158087,
+          "weighted_mean": 962148744236862.4
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.916794453697871e+22,
+          "median": 80486090.50373195,
+          "weighted_mean": 1.7154581121296278e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 101033584384288.0,
+            "limit": 914836.7615259992,
+            "pass": false
+          },
+          {
+            "difference": 111110228091408.0,
+            "limit": 912888.8238847111,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 5173625570528.5,
+            "limit": 46846.978065671836,
+            "pass": false
+          },
+          {
+            "difference": 5689619614217.5,
+            "limit": 46747.23004572205,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 9.011442735747013e+19,
+            "limit": 566008838463.0862,
+            "pass": false
+          },
+          {
+            "difference": 9.909320060641267e+19,
+            "limit": 564271423264.5413,
+            "pass": false
+          }
+        ],
+        "validation.weighted_mean": [
+          {
+            "difference": 5.299911525303321e+18,
+            "limit": 33288751363.580498,
+            "pass": false
+          },
+          {
+            "difference": 5.827981283060089e+18,
+            "limit": 33186568537.755302,
+            "pass": false
+          }
+        ]
+      },
+      "resolution_stable_last3": false,
+      "runtime_seconds": 313.64680671691895,
+      "theta_sha256": "3e0738ec51a0b9d34d61850a2d9d8319f67a1326398568a703c2cee35b14ad89",
+      "updates": 208
+    },
+    {
+      "accepted": true,
+      "block": 27,
+      "gates": {
+        "test_max_nonworse": true,
+        "test_validators_green": true,
+        "test_weighted_mean_improved": true,
+        "validation_max_nonworse": true,
+        "validation_validators_green": true,
+        "validation_weighted_mean_improved": true
+      },
+      "last_batch_loss_pre_update": 5425042114557287.0,
+      "last_grad_norm": 2.0615576578634564e+16,
+      "metrics": {
+        "test": {
+          "all_validators": true,
+          "max": 4.718890950788414e+16,
+          "median": 267987883.48326224,
+          "weighted_mean": 2416450834112206.0
+        },
+        "train": {
+          "all_validators": true,
+          "max": 1.3179173430702912e+16,
+          "median": 188795463.3815876,
+          "weighted_mean": 960033894126566.5
+        },
+        "validation": {
+          "all_validators": true,
+          "max": 2.9124478334961296e+22,
+          "median": 80410885.17602047,
+          "weighted_mean": 1.7129017287425445e+21
+        }
+      },
+      "resolution_details": {
+        "test.max": [
+          {
+            "difference": 111110228091408.0,
+            "limit": 912888.8238847111,
+            "pass": false
+          },
+          {
+            "difference": 48739313847600.0,
+            "limit": 910746.6075419936,
+            "pass": false
+          }
+        ],
+        "test.weighted_mean": [
+          {
+            "difference": 5689619614217.5,
+            "limit": 46747.23004572205,
+            "pass": false
+          },
+          {
+            "difference": 2495793064872.5,
+            "limit": 46637.5336088522,
+            "pass": false
+          }
+        ],
+        "validation.max": [
+          {
+            "difference": 9.909320060641267e+19,
+            "limi
