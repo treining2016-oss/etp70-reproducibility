@@ -1,0 +1,150 @@
+name: ETP72 One Shot Frozen HYM 232-240
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/etp72-one-shot-u232-u240.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  etp71:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      ETP71_BUNDLE_URL: "https://l67.ai/etp72-transfer-u232-u240-69a45405b01acbbe"
+      ETP71_BUNDLE_SHA256: "69a45405b01acbbe2a4e2d5755a0cd555063aef058c56892440e031f3c266e02"
+
+    steps:
+      - name: Runtime resource gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          CPU="$(nproc)"
+          MEM_KB="$(awk '/^MemTotal:/ {print $2}' /proc/meminfo)"
+          echo "ETP71_CPU=$CPU"
+          echo "ETP71_MEM_KB=$MEM_KB"
+          test "$CPU" -ge 4
+          test "$MEM_KB" -ge 12582912
+          sudo -n true
+          echo "ETP71_RESOURCE_GATE=GREEN"
+
+      - name: Fetch frozen portable bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          BUNDLE="$RUNNER_TEMP/ETP71_EXTERNAL_PORTABLE_V1.tar.gz"
+          curl --fail --show-error --location --retry 3 --retry-delay 2 "$ETP71_BUNDLE_URL" -o "$BUNDLE"
+          echo "$ETP71_BUNDLE_SHA256  $BUNDLE" | sha256sum -c -
+          stat -c 'ETP71_BUNDLE_BYTES=%s' "$BUNDLE"
+          echo "ETP71_BUNDLE_GATE=GREEN"
+
+      - name: Prepare pinned Python environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m venv "$RUNNER_TEMP/etp71-venv"
+          "$RUNNER_TEMP/etp71-venv/bin/python" -m pip install --disable-pip-version-check --no-cache-dir             "jax==0.4.38" "jaxlib==0.4.38" "optax==0.2.3"             "numpy==2.2.4" "jaxtyping==0.2.38" "sympy==1.13.3"
+          "$RUNNER_TEMP/etp71-venv/bin/python" - <<'PY'
+          import jax,jaxlib,optax,numpy,jaxtyping,sympy,json
+          got={"jax":jax.__version__,"jaxlib":jaxlib.__version__,"optax":optax.__version__,
+               "numpy":numpy.__version__,"jaxtyping":jaxtyping.__version__,"sympy":sympy.__version__}
+          want={"jax":"0.4.38","jaxlib":"0.4.38","optax":"0.2.3",
+                "numpy":"2.2.4","jaxtyping":"0.2.38","sympy":"1.13.3"}
+          print("ETP71_PACKAGES="+json.dumps(got,sort_keys=True))
+          assert got==want,(got,want)
+          PY
+          echo "ETP71_PACKAGE_GATE=GREEN"
+
+      - name: Extract and run frozen worker
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/etp71-work"
+          tar -xzf "$RUNNER_TEMP/ETP71_EXTERNAL_PORTABLE_V1.tar.gz" -C "$RUNNER_TEMP/etp71-work"
+          WORK="$RUNNER_TEMP/etp71-work/etp71-external-portable-u232-u240"
+          echo "01f1c63b24e5eb29e8a35d71a8d32f79802210de7d3ef61c14ed6283476764c8  $WORK/payload/modal-bridge/etp70_modal_production_hym_v1.py" | sha256sum -c -
+          set +e
+          sudo "$RUNNER_TEMP/etp71-venv/bin/python" "$WORK/etp71_portable_worker_v2.py"             >"$RUNNER_TEMP/etp71-worker.stdout" 2>"$RUNNER_TEMP/etp71-worker.stderr"
+          RC=$?
+          set -e
+          echo "ETP71_WORKER_RC=$RC"
+          cat "$RUNNER_TEMP/etp71-worker.stdout" || true
+          cat "$RUNNER_TEMP/etp71-worker.stderr" >&2 || true
+          test "$RC" -eq 0
+          python3 - "$WORK/result/ETP71_PORTABLE_RECEIPT_V1.json" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1]))
+          print("ETP71_WORKER_STATUS="+str(d.get("status")))
+          assert d.get("status")=="RAW_COMPLETE_AWAIT_SERVER152_PROMOTION",d
+          assert d.get("updates_before")==232 and d.get("updates_after")==240,d
+          PY
+          echo "ETP71_WORKER_GATE=GREEN"
+
+      - name: Repair result ownership
+        shell: bash
+        run: |
+          set -euo pipefail
+          WORK="$RUNNER_TEMP/etp71-work/etp71-external-portable-u232-u240"
+          sudo chown -R "$(id -u):$(id -g)" "$WORK/result"
+          test -r "$WORK/result/ETP71_PORTABLE_RESULT_V1.npz"
+          test -r "$WORK/result/ETP71_PORTABLE_RECEIPT_V1.json"
+          echo "ETP71_RESULT_OWNERSHIP_GATE=GREEN"
+
+      - name: Build exact provider receipt and emit return pack
+        shell: bash
+        run: |
+          set -euo pipefail
+          WORK="$RUNNER_TEMP/etp71-work/etp71-external-portable-u232-u240"
+          RESULT="$WORK/result/ETP71_PORTABLE_RESULT_V1.npz"
+          RECEIPT="$WORK/result/ETP71_PORTABLE_RECEIPT_V1.json"
+          PROVIDER="$WORK/result/ETP71_PROVIDER_ZERO_CASH_RECEIPT_V1.json"
+          python3 - "$RESULT" "$RECEIPT" "$PROVIDER" <<'PY'
+          import hashlib,json,os,pathlib,sys
+          result,receipt,provider=map(pathlib.Path,sys.argv[1:4])
+          def sha(p):
+              h=hashlib.sha256()
+              with p.open("rb") as f:
+                  for b in iter(lambda:f.read(1024*1024),b""): h.update(b)
+              return h.hexdigest()
+          r=json.load(receipt.open())
+          result_sha=sha(result)
+          assert r["result_sha256"]==result_sha
+          mem_kb=0
+          for line in pathlib.Path("/proc/meminfo").read_text().splitlines():
+              if line.startswith("MemTotal:"):
+                  mem_kb=int(line.split()[1]); break
+          cpu=int(os.cpu_count() or 0)
+          ram_gib=mem_kb/1024/1024
+          obj={
+            "card_used":False,
+            "cash_spend_usd":"0",
+            "cpu":cpu,
+            "evidence":"GitHub Actions standard ubuntu-latest runner in public repository treining2016-oss/etp70-reproducibility; GitHub public standard runners are free; runtime-observed CPU/RAM recorded here; no artifact storage, paid runner, card, GPU, or paid fallback used.",
+            "paid_fallback":False,
+            "provider":"GitHub Actions public standard runner",
+            "provider_session_id":f"{os.environ['GITHUB_REPOSITORY']}:{os.environ['GITHUB_RUN_ID']}:{os.environ.get('GITHUB_RUN_ATTEMPT','1')}:{os.environ['GITHUB_JOB']}",
+            "ram_gib":ram_gib,
+            "result_sha256":result_sha,
+            "schema":"ETP71_PROVIDER_ZERO_CASH_RECEIPT_V1",
+            "status":"GREEN_ZERO_CASH_VERIFIED"
+          }
+          assert set(obj)=={"schema","status","provider","provider_session_id","cash_spend_usd","card_used","paid_fallback","cpu","ram_gib","result_sha256","evidence"}
+          assert cpu>=4 and ram_gib>=12 and obj["cash_spend_usd"]=="0" and not obj["card_used"] and not obj["paid_fallback"]
+          provider.write_text(json.dumps(obj,sort_keys=True,indent=2)+"\n")
+          print("ETP71_RESULT_SHA256="+result_sha)
+          print("ETP71_PROVIDER_CPU="+str(cpu))
+          print("ETP71_PROVIDER_RAM_GIB="+str(ram_gib))
+          PY
+          cp "$RUNNER_TEMP/etp71-worker.stdout" "$WORK/result/ETP71_WORKER_STDOUT.txt"
+          cp "$RUNNER_TEMP/etp71-worker.stderr" "$WORK/result/ETP71_WORKER_STDERR.txt"
+          tar -C "$WORK/result" -czf "$RUNNER_TEMP/ETP71_GITHUB_RETURN_V1.tar.gz"             ETP71_PORTABLE_RESULT_V1.npz             ETP71_PORTABLE_RECEIPT_V1.json             ETP71_PROVIDER_ZERO_CASH_RECEIPT_V1.json             ETP71_WORKER_STDOUT.txt             ETP71_WORKER_STDERR.txt
+          RETURN_SHA="$(sha256sum "$RUNNER_TEMP/ETP71_GITHUB_RETURN_V1.tar.gz" | awk '{print $1}')"
+          echo "ETP71_RETURN_SHA256=$RETURN_SHA"
+          echo "ETP71_RETURN_BASE64_BEGIN"
+          base64 -w 0 "$RUNNER_TEMP/ETP71_GITHUB_RETURN_V1.tar.gz"
+          echo
+          echo "ETP71_RETURN_BASE64_END"
