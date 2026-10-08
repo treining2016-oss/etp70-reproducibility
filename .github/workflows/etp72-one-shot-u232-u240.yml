@@ -148,3 +148,11 @@ jobs:
           base64 -w 0 "$RUNNER_TEMP/ETP71_GITHUB_RETURN_V1.tar.gz"
           echo
           echo "ETP71_RETURN_BASE64_END"
+
+      - name: Upload exact return artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ETP71_GITHUB_RETURN_U232_U240_V1
+          path: ${{ runner.temp }}/ETP71_GITHUB_RETURN_V1.tar.gz
+          if-no-files-found: error
+          retention-days: 1
