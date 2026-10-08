@@ -1,0 +1,74 @@
+{
+  "acceptance_changed": false,
+  "builder": "ETP71_NEXT_BLOCK_BUILDER_V1",
+  "created_at_utc": "2026-10-08T12:04:44.742303+00:00",
+  "duplicate_work_prohibited": true,
+  "environment": {
+    "cpu_min": 4,
+    "packages": {
+      "jax": "0.4.38",
+      "jaxlib": "0.4.38",
+      "jaxtyping": "0.2.38",
+      "numpy": "2.2.4",
+      "optax": "0.2.3",
+      "sympy": "1.13.3"
+    },
+    "ram_gib_min": 12
+  },
+  "external_role": "compute + receipt only; never mutates or promotes server152 scientific state",
+  "financial_gate": {
+    "card_allowed": false,
+    "cash_spend_usd_max": 0,
+    "paid_fallback": false,
+    "provider_execution_authorized_now": true,
+    "reason": "GitHub Actions public standard runner already verified at 4 CPU / >=12 GiB and zero-cash; no artifact storage or paid runner required."
+  },
+  "frozen_runner_sha256": "01f1c63b24e5eb29e8a35d71a8d32f79802210de7d3ef61c14ed6283476764c8",
+  "horizon_changed": false,
+  "input": {
+    "checkpoint_relpath": "payload/production/R0p5_P0_CHECKPOINT_AT_240.npz",
+    "checkpoint_sha256": "2497dbdc60cd2b3fe692109ad408e9957c597b2788f61ff06f4b9c6875e3e819",
+    "family_parameter_updates_committed": 752,
+    "point": {
+      "family_interpolant_fit_eligible": true,
+      "heldout_orbit": false,
+      "homogeneous_normalized": {
+        "e0_im": 0,
+        "e0_re": 0.8944271909999159,
+        "e1_im": 0,
+        "e1_re": 0.4472135954999579
+      },
+      "id": "R0p5_P0",
+      "independent_hym_materialization": true,
+      "phase": "0*pi/4",
+      "phase_index": 0,
+      "rho": 0.5,
+      "stage2_sentinel": null,
+      "z_im": 0,
+      "z_re": 0.5
+    },
+    "point_id": "R0p5_P0",
+    "point_ordinal": 2,
+    "point_state_relpath": "payload/production/R0p5_P0_POINT_STATE_AT_240.json",
+    "point_state_sha256": "dcc18de1bbcad49175cf32a8430d09f2ae37cffeb966147b0c7ab44f56a75763",
+    "updates_after_required": 248,
+    "updates_before": 240
+  },
+  "no_false_green": true,
+  "optimizer_changed": false,
+  "predecessor_commit_receipt_sha256": "3c60722a6cd64d7fb9ba4de563195ac30b860168ec6991492db1ccae6b330190",
+  "schema": "ETP71_EXTERNAL_PORTABLE_EXECUTION_PREREG_V2",
+  "scientific_object_changed": false,
+  "scientific_prereg_sha256": "7ef54f61adf206ca880a2c9a809dc6385506d2224a3d4488307a9b3656042cf5",
+  "server152_ingest": "requires exact current checkpoint SHA/update count, frozen M7 attestation PASS, finite protocol-valid block result, frozen acceptance, and independent zero-cash provider receipt before atomic commit",
+  "single_writer": true,
+  "state_authority": "server152",
+  "status": "FROZEN_SUCCESSOR_EXECUTION_READY",
+  "transport_attestation": {
+    "envelope_sha256": "4c4e4f08d50f85b025a04e1d82aba834882797f7ca138ce3304a2fe011d9a563",
+    "frozen_layer": "M7",
+    "reference_output_sha256": "1be3d961872e674915e9e84d0af89e86cd7250a55143e9edf03c96418dd6e926",
+    "required_before_production_block": true
+  },
+  "work_id": "etp-line"
+}
