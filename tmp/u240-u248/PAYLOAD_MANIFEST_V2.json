@@ -1,0 +1,517 @@
+{
+  "files": {
+    "payload/cymyc/.github/workflows/ci.yml": {
+      "bytes": 930,
+      "sha256": "157c97ca8c3f338321d03b361e9a69c4797b94ae6196167b9c5cbe53a25651e4"
+    },
+    "payload/cymyc/.gitignore": {
+      "bytes": 2192,
+      "sha256": "84b0eef78bb48d761848e3c3a33d64efb568ed7ff9bc13113f4e5c198a510a2f"
+    },
+    "payload/cymyc/LICENSE": {
+      "bytes": 1061,
+      "sha256": "ba334f4e3a34fb236fa6570970b5fcd4117f452963121314dbf940eb55cd9962"
+    },
+    "payload/cymyc/README.md": {
+      "bytes": 3120,
+      "sha256": "54b2f647294b2bdb4991dfc1e068467d6a9246d2b182d36df758f3eda5619d5b"
+    },
+    "payload/cymyc/cymyc/__init__.py": {
+      "bytes": 22,
+      "sha256": "0ec0077712c2d7a1f6563745394e6d071db14fd567350f976d34b6e1f4426bfc"
+    },
+    "payload/cymyc/cymyc/alg_geo.py": {
+      "bytes": 21235,
+      "sha256": "a5480c2369b700d9bb4397ef328542a3a9609ce28394c28e5cc2b38459455bc8"
+    },
+    "payload/cymyc/cymyc/approx/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "payload/cymyc/cymyc/approx/bundle.py": {
+      "bytes": 28680,
+      "sha256": "e91c3fd46b0cfa54d7f76986ec82e4be889130de1e919f60999d300a89674ad8"
+    },
+    "payload/cymyc/cymyc/approx/default_config.py": {
+      "bytes": 1410,
+      "sha256": "edfe442783643dfc6a838aeab7067559691015154ee3183d74d63b874e5a7008"
+    },
+    "payload/cymyc/cymyc/approx/eta_train.py": {
+      "bytes": 8533,
+      "sha256": "8f4d39c06e392754dceb13cdda524e6780d44ef884fa30b150bd25b0b5865f20"
+    },
+    "payload/cymyc/cymyc/approx/harmonic.py": {
+      "bytes": 54436,
+      "sha256": "144ccc495e9bdcdee38f06d561829d44033c06bb8a866f4bb4d036362a1c7884"
+    },
+    "payload/cymyc/cymyc/approx/harmonic_bundle.py": {
+      "bytes": 1362,
+      "sha256": "846e9f9c7416144e81968640cdabb847f93e11cc151d762eb87affe80c47edc8"
+    },
+    "payload/cymyc/cymyc/approx/hym.py": {
+      "bytes": 8396,
+      "sha256": "97a9f595acc4ef225dbc20fe0763fabd96eb02b2edc954cefa706c0c5102269e"
+    },
+    "payload/cymyc/cymyc/approx/losses.py": {
+      "bytes": 19358,
+      "sha256": "95bf36532ff23b4e99ead49f4b218f0242e1446ecb3f3a1d99d53f3721448768"
+    },
+    "payload/cymyc/cymyc/approx/measures.py": {
+      "bytes": 1307,
+      "sha256": "e300d01d6c11d94deb98ed1cc2cd6431ac3c8594e76fbee70bcda53e3abc17f8"
+    },
+    "payload/cymyc/cymyc/approx/models.py": {
+      "bytes": 33733,
+      "sha256": "009cf102bb84cdfda3936ecf66a18911f88fe04afb4f4a269774683dffb3437b"
+    },
+    "payload/cymyc/cymyc/approx/train.py": {
+      "bytes": 7348,
+      "sha256": "2b36178dd4f95a3c11669b18112136b270ec920ba2751f79f3c699d1ff89dc72"
+    },
+    "payload/cymyc/cymyc/chern_gauss_bonnet.py": {
+      "bytes": 12423,
+      "sha256": "d62bc0dddf68c53b28c816512826bfa8dcef6bf88fca78eac86f5343208c8e78"
+    },
+    "payload/cymyc/cymyc/curvature.py": {
+      "bytes": 14074,
+      "sha256": "a323a14ebcbe962dba3f1bf561c8a4834a613636ca5c39c825e4418404b670b0"
+    },
+    "payload/cymyc/cymyc/dataloading.py": {
+      "bytes": 4349,
+      "sha256": "14f782955b4484547733d9f91a39f2808cafa1984f7fe6a0054554a7064ccabe"
+    },
+    "payload/cymyc/cymyc/fubini_study.py": {
+      "bytes": 14548,
+      "sha256": "bcdc58a23a730bcb12d29a46605ca42c4027a1b9814667385e13760d5c8ea58a"
+    },
+    "payload/cymyc/cymyc/moduli/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "payload/cymyc/cymyc/moduli/moduli_scan.py": {
+      "bytes": 9360,
+      "sha256": "f5cf8f4fc526efe89913c5c97ee193d13d89beeff50382ee039d80cbe147bfd8"
+    },
+    "payload/cymyc/cymyc/moduli/wp.py": {
+      "bytes": 46108,
+      "sha256": "3ca7c11fed4e7d455796917a99552e02c4b9b78ce7a870a9efa181469ea57374"
+    },
+    "payload/cymyc/cymyc/monad_bundle.py": {
+      "bytes": 26935,
+      "sha256": "b5c5e6e4208270c486ddb98f32712daa2ed127dca71ca3fa94e9877c4f062ff8"
+    },
+    "payload/cymyc/cymyc/monads.py": {
+      "bytes": 108688,
+      "sha256": "facc29869c02a75c40c01915221935752ed229abce2b099a4d2409118d7bfa70"
+    },
+    "payload/cymyc/cymyc/utils/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "payload/cymyc/cymyc/utils/gen_utils.py": {
+      "bytes": 12247,
+      "sha256": "8d6dc934ab982b635c3b6d3af29d825e2fc807532af78234c3f801316c9000d6"
+    },
+    "payload/cymyc/cymyc/utils/math_utils.py": {
+      "bytes": 10130,
+      "sha256": "6b41028bbf3a1dc5feaaf028d8414e9f6fedc998d408d7ce2781c55bd96f94bb"
+    },
+    "payload/cymyc/cymyc/utils/ops.py": {
+      "bytes": 4074,
+      "sha256": "f5e8921db68999934fb0374973298f658d2a3f4bc2bdbc43ea7d720114b60b0c"
+    },
+    "payload/cymyc/cymyc/utils/pointgen.py": {
+      "bytes": 10582,
+      "sha256": "2f7c8d25e27b11232af79da1dea76051f23aadce2755f126024f791c5884c49b"
+    },
+    "payload/cymyc/cymyc/utils/pointgen_cicy.py": {
+      "bytes": 26593,
+      "sha256": "8b3f8a123799f364cf30d815ca821bb1db2e8c32b950511b7ae541ee11ae42d0"
+    },
+    "payload/cymyc/cymyc/utils/poly_utils.py": {
+      "bytes": 6517,
+      "sha256": "fce2d5c5b5245d0590e1e190fb878fd60c3e404c77cba6f5cd2c945eb7d3538a"
+    },
+    "payload/cymyc/cymyc/utils/types.py": {
+      "bytes": 599,
+      "sha256": "c3330d743e76d8eee32c041cc922feaa7b999fbd37e69838d94e0a02f960a538"
+    },
+    "payload/cymyc/docs/.citation.md": {
+      "bytes": 516,
+      "sha256": "55961e032de41732b6d532c424406ff78456c1179c75ee96cd9393d5084f05be"
+    },
+    "payload/cymyc/docs/_static/custom_css.css": {
+      "bytes": 3253,
+      "sha256": "69bd115f935e97888632cadf2e398c4e12eb6f600960668798d0193da5e95cdf"
+    },
+    "payload/cymyc/docs/_static/favicon-32x32.png": {
+      "bytes": 3473,
+      "sha256": "519ae49dd11fe677f5fe7029f3839e353790a12e7e0b16ba147281eae18d0aa8"
+    },
+    "payload/cymyc/docs/_static/gen_ref_pages.py": {
+      "bytes": 752,
+      "sha256": "e21bd2e0a4b40131c53af86096554910889a8861e17c9cf354f7662288107f23"
+    },
+    "payload/cymyc/docs/_static/katex.js": {
+      "bytes": 308,
+      "sha256": "27b2bdee876549ba16cb84e9b00428460425eb4bbd72edff34a5d0e4e49a73b2"
+    },
+    "payload/cymyc/docs/_static/mathjax.js": {
+      "bytes": 420,
+      "sha256": "7c08e25aff3fb37bd581cda7c4529c9b32bb024e36e4d7247b768f450f728557"
+    },
+    "payload/cymyc/docs/api/chern_gauss_bonnet.md": {
+      "bytes": 48,
+      "sha256": "011dd5320885344407be5594daa11e58720b534ddf0c8d0a2e5da67af8a41749"
+    },
+    "payload/cymyc/docs/api/curvature.md": {
+      "bytes": 39,
+      "sha256": "e335be78677c5e7d8445d5b1889c69fe8501c370f218bee5858880de82b251bb"
+    },
+    "payload/cymyc/docs/api/fubini_study.md": {
+      "bytes": 42,
+      "sha256": "aa82a5389a4e0209bdadb8e6cf0e84b262134220c3640e2dea61816efe537868"
+    },
+    "payload/cymyc/docs/api/harmonic.md": {
+      "bytes": 336,
+      "sha256": "412023c367f5f21a8b678fa48849501d40ae4e90b67207cfdc05f3f8ecd2374a"
+    },
+    "payload/cymyc/docs/api/losses.md": {
+      "bytes": 43,
+      "sha256": "d654880edc40be62905cce0e6cf7bcf9d2db7f62b21ea564e3fd8a28a88a6c20"
+    },
+    "payload/cymyc/docs/api/models.md": {
+      "bytes": 109,
+      "sha256": "fca8a103c22b6e8930076f39f79bb34757980f45cdd48dd4597c71b27ff0b1cc"
+    },
+    "payload/cymyc/docs/api/moduli_space.md": {
+      "bytes": 299,
+      "sha256": "8b5ff7feb343c368739a045ba74d0629295e91d9efae48bbd0f9b7b4adc86e13"
+    },
+    "payload/cymyc/docs/examples/assets/spectral_arch.png": {
+      "bytes": 403650,
+      "sha256": "5cb1a6995c1219e2e545f7c41453e3c104fd5793bc5141144dd4a51b42a2e830"
+    },
+    "payload/cymyc/docs/examples/cs_moduli.md": {
+      "bytes": 327,
+      "sha256": "bbd5a6b70307ee9d889554694f76488040957163d098a2b0764e881a51efbfe7"
+    },
+    "payload/cymyc/docs/examples/curvature.ipynb": {
+      "bytes": 24228,
+      "sha256": "368a447b8ccce1c6c02cb559f4ebc46908bc932320d239380efbdad0e4171a42"
+    },
+    "payload/cymyc/docs/examples/harmonic.ipynb": {
+      "bytes": 141429,
+      "sha256": "e01533b002c837bcdad55f36b6d5569adff74905e01a42ee547f1cf83e5d1f01"
+    },
+    "payload/cymyc/docs/examples/metric_approx.ipynb": {
+      "bytes": 183288,
+      "sha256": "1215c7f995e6a75d5399eb5dc61d486dd588638cd60b0dd703005aea0ddd4f97"
+    },
+    "payload/cymyc/docs/examples/workflow.md": {
+      "bytes": 3253,
+      "sha256": "408361e611d4523c25bf0ed91ac5e43f710ae3e08905f64ce3045de87e464f59"
+    },
+    "payload/cymyc/docs/faq.md": {
+      "bytes": 6862,
+      "sha256": "fe3275a2a2da88235d8f568ef46ef23b2dd87069a45f9ddda9f368df51ed4cc4"
+    },
+    "payload/cymyc/docs/index.md": {
+      "bytes": 2886,
+      "sha256": "1216fb4fa844685ff1159a2ccc94e002ba96c89ff7b5e570d6e336125d968d53"
+    },
+    "payload/cymyc/docs/overview.md": {
+      "bytes": 1958,
+      "sha256": "ef672e1b624a2197e1e2db0549713fa59312cb981e2123cc5f740f1cec804cd4"
+    },
+    "payload/cymyc/docs/requirements.txt": {
+      "bytes": 429,
+      "sha256": "2ae158bd540cb026c7275f3850848ef45f46459a407b2fa5618eef6d7df2d28c"
+    },
+    "payload/cymyc/examples/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "payload/cymyc/examples/examples/assets/spectral_arch.png": {
+      "bytes": 403650,
+      "sha256": "5cb1a6995c1219e2e545f7c41453e3c104fd5793bc5141144dd4a51b42a2e830"
+    },
+    "payload/cymyc/examples/examples/cs_moduli.md": {
+      "bytes": 327,
+      "sha256": "bbd5a6b70307ee9d889554694f76488040957163d098a2b0764e881a51efbfe7"
+    },
+    "payload/cymyc/examples/examples/workflow.md": {
+      "bytes": 3253,
+      "sha256": "408361e611d4523c25bf0ed91ac5e43f710ae3e08905f64ce3045de87e464f59"
+    },
+    "payload/cymyc/examples/poly_spec.py": {
+      "bytes": 13076,
+      "sha256": "49a9aa2bd1f949b2b82437c9533d10b8b99df6a850a5992028313bb327751b96"
+    },
+    "payload/cymyc/examples/tian_yau/TY_KM_poly_spec.py": {
+      "bytes": 9001,
+      "sha256": "6204cf3cc15eaa3c071bad2e0341a3f15fe4135dd8c29c49553be21b9df826a9"
+    },
+    "payload/cymyc/examples/tian_yau/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "payload/cymyc/examples/tian_yau/gen_metadata_TY.py": {
+      "bytes": 1361,
+      "sha256": "309f6e2989fe6a4491ee1c343565e70ca7c11bab6c58166bc40a432b1a238b03"
+    },
+    "payload/cymyc/examples/tian_yau/moduli_pg_TY.py": {
+      "bytes": 2319,
+      "sha256": "fd43f6d0e0337c0e95b52e7a7da4a47df744a3567367397dd4893d29459575f3"
+    },
+    "payload/cymyc/examples/tian_yau/wp_moduli_scan.py": {
+      "bytes": 8197,
+      "sha256": "21dde1bc9bcd2d9e1c5836da021207d32a1b5e43c3a03eb76396c35ddcd274ea"
+    },
+    "payload/cymyc/mkdocs.yml": {
+      "bytes": 7792,
+      "sha256": "19184d9d78e4ef5f39ef1202e1e4101df91e397b41516c0ac3a90f82c495185f"
+    },
+    "payload/cymyc/pyproject.toml": {
+      "bytes": 1367,
+      "sha256": "7daf236e63a72158d2d0e92b04074a0944f5115a6fe6334b27db6dce3c8ea5b8"
+    },
+    "payload/etp60-hym/ETP60_HYM_DYNAMIC_ATLAS_PREFLIGHT_V1.py": {
+      "bytes": 11050,
+      "sha256": "6848ad030c6cd6823d839b2bba58def483b8d2a33c218e1044de200460e110fe"
+    },
+    "payload/etp60-hym/ETP60_HYM_DYNAMIC_ATLAS_PREFLIGHT_V1.py.bak.20260929-033749-167914": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "payload/etp60-hym/ETP60_HYM_DYNAMIC_ATLAS_V1.py": {
+      "bytes": 8604,
+      "sha256": "586ce880a8463a2395388a705c8a10fbe950e488e659bebeb6dcc7fc95613379"
+    },
+    "payload/etp60-hym/ETP60_HYM_DYNAMIC_ATLAS_V1.py.bak.20260929-033221-002663": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "payload/etp60-hym/ETP60_HYM_DYNAMIC_ATLAS_V1.py.bak.20260929-033820-248130": {
+      "bytes": 8642,
+      "sha256": "140597d85b3b46920e87d2f425e128301d4b6760eb0f0927cc5fe6584a938aca"
+    },
+    "payload/etp60-hym/ETP60_HYM_DYNAMIC_ATLAS_V1.py.bak.20260929-033830-387809": {
+      "bytes": 8598,
+      "sha256": "5a3141659ca3a50e6a809562e3cffdd7eed2efc2bc04b6812b1af2405517fba1"
+    },
+    "payload/etp60-hym/ETP60_HYM_HREF_VMAP_V1.py": {
+      "bytes": 2214,
+      "sha256": "9076bcfbc8d2eea38566dcddf3782f698ef12c56116b6fbd9620364c46a8e67e"
+    },
+    "payload/etp60-hym/ETP60_HYM_HREF_VMAP_V1.py.bak.20260929-195355-828943": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "payload/etp60-hym/ETP60_HYM_PREFLIGHT_RESUMABLE_V1.py": {
+      "bytes": 12869,
+      "sha256": "641298afa12451af34a1a5c789bf3a103bf1c6dd4c25df92c691fd9d87d5bf1a"
+    },
+    "payload/etp60-hym/ETP60_HYM_PREFLIGHT_RESUMABLE_V1.py.bak.20260929-192856-755011": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "payload/etp60-hym/ETP60_HYM_PREFLIGHT_STAGED_V2.py": {
+      "bytes": 7965,
+      "sha256": "cd91a1c64802a2e1986b279657b978e02964049ecdcb50fd269985ce520112e8"
+    },
+    "payload/etp60-hym/ETP60_HYM_PREFLIGHT_STAGED_V2.py.bak.20260929-171247-502269": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "payload/etp60-hym/ETP60_HYM_PREFLIGHT_STAGE_B_DIRECTIONAL_V1.py": {
+      "bytes": 2519,
+      "sha256": "5f6b6c29ebafa6d28a5af3383aaae27fd88a1aa074b209e850797d2fabf6378c"
+    },
+    "payload/etp60-hym/ETP60_HYM_PREFLIGHT_STAGE_B_DIRECTIONAL_V1.py.bak.20260929-203336-643824": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "payload/etp60-hym/ETP61_HYM_PREFLIGHT_STAGE_B_AGGREGATE_A4_V1.json": {
+      "bytes": 2383,
+      "sha256": "467a48cd18bb475d823dd31697995f191023c984ccb018275b0d4fcb39679241"
+    },
+    "payload/etp60-hym/ETP61_HYM_PREFLIGHT_STAGE_B_AGGREGATE_A4_V1.json.bak.20260929-221535-028486": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "payload/etp60-hym/ETP61_HYM_PREFLIGHT_STAGE_C_MULTI_V1.py": {
+      "bytes": 6473,
+      "sha256": "762762035c6ced0d2ddce30dba7a7767e970f4a56da129d3593538769f519728"
+    },
+    "payload/etp60-hym/ETP61_HYM_PREFLIGHT_STAGE_C_MULTI_V1.py.bak.20260930-005736-214663": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_DYNAMIC_ATLAS_COVERAGE_V1.npz": {
+      "bytes": 136130,
+      "sha256": "d0530438fe0b812cf1f2907e296f4bd9331e68a6bd3f7a611aba40c338ddfb6f"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_DYNAMIC_ATLAS_DERIVATIVE_V1.npz": {
+      "bytes": 13634,
+      "sha256": "17080fb2fb9ed03de88bc540a1e2a70b5a470477015725ada16cdd9a12f2d50a"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_PREFLIGHT_SOURCE_E0_V1.json": {
+      "bytes": 872,
+      "sha256": "4a561cfd7e1606a7f4a45d7e3b2ad961007a0e144463e45fd4b1c48ead498b3d"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_PREFLIGHT_SOURCE_E1_V1.json": {
+      "bytes": 870,
+      "sha256": "353a67a49b676386695184314535e8b195193735649eb81359173cce324d50fe"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_PREFLIGHT_SOURCE_IMINUS_V1.json": {
+      "bytes": 873,
+      "sha256": "85468e7476b02a6aec253ee0ba047bd758ef233872b6927e6c8064bb93eb204d"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_PREFLIGHT_SOURCE_IPLUS_V1.json": {
+      "bytes": 875,
+      "sha256": "33fc59a27f61f491c581ab44a66cc5b00f802be48ec2e7ca4d2e0b394003694e"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_PREFLIGHT_SOURCE_MINUS_V1.json": {
+      "bytes": 875,
+      "sha256": "2477b6d3354333e7a5848919d3785f0db8c6e335562fd6eb8b0895a6f28acb55"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_PREFLIGHT_SOURCE_PLUS_V1.json": {
+      "bytes": 874,
+      "sha256": "2a59cf7a50b399f18f350680ad8f980391ed444cd37b4b412b234ae3989e34ec"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_PREFLIGHT_STAGE_A_V2.json": {
+      "bytes": 1305,
+      "sha256": "aaf6648017f6bad7341981b30a5eef2864b120cfb87496ecc3035357c0977c22"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_PREFLIGHT_STAGE_B_E0_V1.json": {
+      "bytes": 634,
+      "sha256": "6fcbae25925bc40c8865910f8868320e6131f76e3a29c748e30f629dd4b875c7"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_PREFLIGHT_STAGE_B_E1_V1.json": {
+      "bytes": 635,
+      "sha256": "31a3f7957be3374f762cc6c5de53fc0fc48cadbe63cf0ed11416af80e82a8624"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_PREFLIGHT_STAGE_B_IMINUS_V1.json": {
+      "bytes": 638,
+      "sha256": "b46cc8112b1ba7391828215e5d27ba539ee5de511512fee718fda0d2b79a9b68"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_PREFLIGHT_STAGE_B_IPLUS_V1.json": {
+      "bytes": 637,
+      "sha256": "e25bf6254342da0768874b9309db642e2fcc27692fa84671e72df189491a4bea"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_PREFLIGHT_STAGE_B_MINUS_V1.json": {
+      "bytes": 639,
+      "sha256": "ac412b931f11a731a34bd87ec624a3511bf9f95c57c1b6fbcbbbcef479eb0626"
+    },
+    "payload/etp60-hym/data/ETP60_HYM_PREFLIGHT_STAGE_B_PLUS_V1.json": {
+      "bytes": 638,
+      "sha256": "6e56919e0769fb9fd44f06832f2286c2690bcc1db19f5ae6b01212b2789894b2"
+    },
+    "payload/etp63-hym-readiness/ETP63_EXACT_HSM_RANK4_HYM_BACKEND_V3.py": {
+      "bytes": 10512,
+      "sha256": "231c2994653e0a0ca5c1ac1901902c3985c32907c3852184ee035807a814cfbf"
+    },
+    "payload/etp63-hym-readiness/ETP63_HYM_TEST_DATASET_V1.npz": {
+      "bytes": 408830,
+      "sha256": "99cfaf9e3028df3bb60753cde5b80764a791f49f121ef285df855f20185bab85"
+    },
+    "payload/etp63-hym-readiness/ETP63_HYM_TRAIN_DATASET_V1.npz": {
+      "bytes": 1629644,
+      "sha256": "b18c9398386d06401a8f31744fc178814c2a9192c08cc818d52c495bddd24ebf"
+    },
+    "payload/etp63-hym-readiness/ETP63_HYM_VALIDATION_DATASET_V1.npz": {
+      "bytes": 408590,
+      "sha256": "ac76b94a350048a048b1be90fde9113eeec9c35eec5868c606f75a8998644196"
+    },
+    "payload/m7/ETP70_M7_LOCAL_META_V1.json": {
+      "bytes": 683,
+      "sha256": "d92353d7af92cfcf6fc45f335f56f8dc351c442bccb03eccf343f262f592cea5"
+    },
+    "payload/m7/ETP70_M7_LOCAL_OUTPUT_V1.npz": {
+      "bytes": 8003,
+      "sha256": "1be3d961872e674915e9e84d0af89e86cd7250a55143e9edf03c96418dd6e926"
+    },
+    "payload/m7/ETP70_MODAL_GRADIENT_ADAM_M7_CALIBRATION_PREREG_V2.json": {
+      "bytes": 3347,
+      "sha256": "215509f5d61d50912a58968e4ca05163d3575beab43e27e5bff76ced229a0937"
+    },
+    "payload/m7/ETP70_MODAL_GRADIENT_ADAM_M7_ENVELOPE_V2.json": {
+      "bytes": 2489,
+      "sha256": "4c4e4f08d50f85b025a04e1d82aba834882797f7ca138ce3304a2fe011d9a563"
+    },
+    "payload/m7/ETP70_V3_STAGE3A_REPLAY_RESOLUTION_RECEIPT_V2.json": {
+      "bytes": 29338,
+      "sha256": "24a2057831dfe1a11e15e0bb49668ba39f9508c9eb0354167f0043a6101aa8f4"
+    },
+    "payload/modal-bridge/__pycache__/freeze_etp70_modal_production_hym_prereg_v1.cpython-313.pyc": {
+      "bytes": 13567,
+      "sha256": "e418e583f384a2549d1d8f89281191bbdbc0c6ecdbd43047aded30c2ab35370c"
+    },
+    "payload/modal-bridge/etp70_modal_production_hym_v1.py": {
+      "bytes": 20934,
+      "sha256": "01f1c63b24e5eb29e8a35d71a8d32f79802210de7d3ef61c14ed6283476764c8"
+    },
+    "payload/modal-bridge/freeze_etp70_modal_production_hym_prereg_v1.py": {
+      "bytes": 7858,
+      "sha256": "15212a44a73bcdaeafe8dbe1e2f9524dba4696b96acbd0e8a5f7f58b62769b10"
+    },
+    "payload/modal-bridge/site/modal.py": {
+      "bytes": 628,
+      "sha256": "76c434a6210d6111b04be8b4a7733764dd6045c3aeff3021e92ef4c186030e0e"
+    },
+    "payload/production/ETP70_MODAL_PRODUCTION_HYM_DISTRIBUTED_PREREG_V1.json": {
+      "bytes": 25537,
+      "sha256": "7ef54f61adf206ca880a2c9a809dc6385506d2224a3d4488307a9b3656042cf5"
+    },
+    "payload/production/ETP70_MODAL_PRODUCTION_HYM_EXECUTION_AUTHORIZATION_V1.json": {
+      "bytes": 1597,
+      "sha256": "60180e7d9c1d64eb4cd801efb99e4f525fe13dcfbbfd4dfa6eb36a0492c16ae7"
+    },
+    "payload/production/FAMILY_STATE_AT_752.json": {
+      "bytes": 265182,
+      "sha256": "73c73b327a0e90c78fadd463a4375c46686e3a0f600e0cc9e7ad51ecd57f9278"
+    },
+    "payload/production/R0p5_P0_BASELINE_V1.json": {
+      "bytes": 3551,
+      "sha256": "67c5e085aef77068c709f191d60d6762a1cf0969c6a5bc4412c11b33290f1069"
+    },
+    "payload/production/R0p5_P0_CHECKPOINT_AT_240.npz": {
+      "bytes": 16139,
+      "sha256": "2497dbdc60cd2b3fe692109ad408e9957c597b2788f61ff06f4b9c6875e3e819"
+    },
+    "payload/production/R0p5_P0_POINT_STATE_AT_240.json": {
+      "bytes": 74129,
+      "sha256": "dcc18de1bbcad49175cf32a8430d09f2ae37cffeb966147b0c7ab44f56a75763"
+    },
+    "payload/stage2/E0_STAGE2_V57.npz": {
+      "bytes": 12940,
+      "sha256": "8022dd76661868913b9c493c635c0370bf8963fc1bed2f2c1dc31a0a3eab9383"
+    },
+    "payload/vendor/a9689/A9687_EXACT_SCHOEN_CICY_MACHINE_PACKET.json": {
+      "bytes": 2678,
+      "sha256": "214e5e3f0ddaa3a096ab41996e796d7da7c3aeea3ee7c87b2e4770326cd5a2bd"
+    },
+    "payload/vendor/a9689/A9688_RESULT.json": {
+      "bytes": 1327,
+      "sha256": "750e2c29535d9c26a344b7007d16fc1dec1fb61b6d827dfc64de5c87ba600c45"
+    },
+    "payload/vendor/a9693/hsm_rank4_holomorphic_atlas_provider.py": {
+      "bytes": 8005,
+      "sha256": "fd04f5da1c240f7e020baaadf2f3219649ac295bb648a3d4575e2b2fe46df894"
+    },
+    "payload/vendor/a9693/hsm_rank4_outer_atlas_provider.py": {
+      "bytes": 5103,
+      "sha256": "6af050ea7ea7dccc6abe2493e01f595850fce6b5d0c5f1b0f1ae729d9d13731d"
+    },
+    "payload/vendor/a9693/hsm_w2_h0_cech_lifts_provider.py": {
+      "bytes": 10320,
+      "sha256": "6084770a0050efb31444606b2f87431c99cfff338f9a353ca2598e551c64ad54"
+    },
+    "payload/vendor/a9694/hsm_rank4_jax_reference_h_provider.py": {
+      "bytes": 9864,
+      "sha256": "d604bb4f6654a8e10cc18d194fd1b4f5798f90ab6a35a3f39eb42c63f79ab38a"
+    }
+  },
+  "schema": "ETP71_PAYLOAD_MANIFEST_V2"
+}
